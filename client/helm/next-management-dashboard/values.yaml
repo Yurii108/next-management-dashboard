@@ -49,7 +49,6 @@ ingress:
   annotations:
     # kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    traefik.ingress.kubernetes.io/router.middlewares: kube-system-http-https-redirect@kubernetescrd
   hosts:
     - host: nextjs.dievri.link
       paths:
