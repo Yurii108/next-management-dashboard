@@ -3,9 +3,14 @@ name: Release
   push:
     branches:
       - dievri/semantic-release
+    # paths:
+    #   - client/*
 jobs:
   release:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client
     steps:
       - uses: actions/checkout@v2
         with:
