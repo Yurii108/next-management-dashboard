@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 /*ROUTE IMPORT*/
 import dashboardRoutes from './routes/dashboardRoutes'
 import productsRoutes from './routes/productsRoutes'
+import usersRoutes from './routes/usersRoutes'
 
 dotenv.config();
 const app = express()
@@ -21,6 +22,7 @@ app.use(cors())
 /* ROUTES */
 app.use('/dashboard', dashboardRoutes) // http://localhost:8000/dashboard
 app.use('/products', productsRoutes) // http://localhost:8000/products
+app.use('/users', usersRoutes) // http://localhost:8000/users
 
 /* SERVER */
 const port = process.env.PORT || 3001
